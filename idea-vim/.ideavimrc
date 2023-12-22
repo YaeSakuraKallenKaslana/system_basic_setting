@@ -19,6 +19,11 @@ nmap <S-Enter> O<Esc>
 nmap ge <action>(GotoNextError)
 " 跳转到当前接口的实现类 "
 nmap ga <action>(GotoImplementation)
+" 进入光标所在的方法/变量的接口"
+nmap gb <action>(GotoDeclaration)
+" 前往当前光标所在的方法的父类的方法/接口定义 "
+nmap gum <action>(GotoSuperMethod)
+
 "切换标签页"
 nmap L <action>(NextTab)
 nmap H <action>(PreviousTab)
