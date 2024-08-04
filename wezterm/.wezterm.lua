@@ -185,7 +185,10 @@ config.enable_scroll_bar = true
 --     hue = 1.0,
 --     saturation = 1.0,
 -- }
-
+-- 设置打开软件之后默认展示的launch_menu
+config.default_prog = {'C:/Users/Elysia/AppData/Local/Microsoft/WindowsApps/Microsoft.PowerShell_8wekyb3d8bbwe/pwsh.exe'}
+-- 设置打开的终端是否使用wsl,xx的值为 wsl -l -v查询处理的
+-- config.default_domain = 'WSL: xx'
 -- 启动菜单的一些启动项
 config.launch_menu = {
   {
@@ -194,6 +197,8 @@ config.launch_menu = {
     {
         'C:/Users/Elysia/AppData/Local/Microsoft/WindowsApps/Microsoft.PowerShell_8wekyb3d8bbwe/pwsh.exe'
     },
+    -- 设置打开之后的工作目录
+    cwd = "/dc"
  },
   --{ label = 'CMD',             args = { 'cmd.exe' }, },
 }
