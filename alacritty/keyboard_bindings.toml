@@ -1,0 +1,133 @@
+# 重绘/清空历史（Command+R）
+[[keyboard.bindings]]
+key = "R"
+mods = "Command"
+mode = "~Vi|~Search"
+chars = '\x0c'
+
+[[keyboard.bindings]]
+key = "R"
+mods = "Command"
+mode = "~Vi|~Search"
+action = "ClearHistory"
+
+# 退出整个 Alacritty 实例（Command+Shift+W）
+[[keyboard.bindings]]
+key = "W"
+mods = "Command|Shift"
+action = "Quit"
+
+# 启动新窗口实例（Command+N）
+[[keyboard.bindings]]
+key = "N"
+mods = "Command"
+action = "SpawnNewInstance"
+
+# 快捷词跳转：Alt+← / Alt+→
+[[keyboard.bindings]]
+key = "Left"
+mods = "Alt"
+chars = '\x1bb'  # 向左跳一个单词（ESC + b）
+
+[[keyboard.bindings]]
+key = "Right"
+mods = "Alt"
+chars = '\x1bf'  # 向右跳一个单词（ESC + f）
+
+# Home/End：Command+← / Command+→ → 转为 Ctrl+A / Ctrl+E
+[[keyboard.bindings]]
+key = "Left"
+mods = "Command"
+chars = '\x01'  # Ctrl+A（跳到行首）
+
+[[keyboard.bindings]]
+key = "Right"
+mods = "Command"
+chars = '\x05'  # Ctrl+E（跳到行尾）
+
+# Command+Backspace：删除整行
+[[keyboard.bindings]]
+key = "Backspace"
+mods = "Command"
+chars = '\x15'  # Ctrl+U（删除到行首）
+
+# Alt+Backspace：删除前一个单词
+[[keyboard.bindings]]
+key = "Backspace"
+mods = "Alt"
+chars = '\x1b\x7f'  # ESC + Delete（常见于 Unix 删除单词）
+
+# Command+T：新建 tmux 窗口/标签页
+[[keyboard.bindings]]
+key = "T"
+mods = "Command"
+chars = '\x1cc'  # 发送 Ctrl+^ + c（假设 tmux 前缀是 Ctrl+^）
+
+[[keyboard.bindings]]
+key = "W"
+mods = "Command"
+chars = '\x1c&'  # Close tab (sends Ctrl+^ then &)
+
+[[keyboard.bindings]]
+key = "LBracket"
+mods = "Command|Shift"
+chars = '\x1cp'  # Go to previous tab
+
+[[keyboard.bindings]]
+key = "RBracket"
+mods = "Command|Shift"
+chars = '\x1cn'  # Go to next tab
+
+[[keyboard.bindings]]
+key = 1
+mods = "Command"
+chars = "\x011"  # Go to tab 1
+
+[[keyboard.bindings]]
+key = 2
+mods = "Command"
+chars = "\x012"  # Go to tab 2
+
+[[keyboard.bindings]]
+key = 3
+mods = "Command"
+chars = "\x013"  # Go to tab 3
+
+[[keyboard.bindings]]
+key = "Digit4"
+mods = "Command"
+chars = '\x014'  # Go to tab 4
+
+[[keyboard.bindings]]
+key = "Digit5"
+mods = "Command"
+chars = '\x015'  # Go to tab 5
+
+[[keyboard.bindings]]
+key = "Digit6"
+mods = "Command"
+chars = '\x016'  # Go to tab 6
+
+[[keyboard.bindings]]
+key = "Digit7"
+mods = "Command"
+chars = '\x017'  # Go to tab 7
+
+[[keyboard.bindings]]
+key = "Digit8"
+mods = "Command"
+chars = '\x018'  # Go to tab 8
+
+[[keyboard.bindings]]
+key = "Digit9"
+mods = "Command"
+chars = '\x019'  # Go to tab 9
+
+[[keyboard.bindings]]
+key = "Backspace"
+action = "ReceiveChar"
+
+[[keyboard.bindings]]
+key = "A"
+mods = "Control"
+action = "None"

@@ -1,0 +1,134 @@
+#shel配置
+[terminal.shell]
+program="/bin/zsh"
+args=["-l", "--interactive"]
+#args=["-l", "-c", "tmux new-session -A -D -s main ||tmux new-session -A -D -s main; exec zsh"]
+
+[env]
+TERM="xterm-256color"
+TERM_PROGRAM="alacritty"
+
+# 通用设置
+[general]
+live_config_reload=true
+# 导入快捷键配置
+# import=["keyboard-bindings.toml"]
+
+
+# 窗口设置
+[window]
+option_as_alt = "Both"
+# 窗口的标题栏和边框样式 full:标题栏+边框+控制按钮;none:隐藏所有装饰;buttonless:无按钮模式(只有Mac下有用) transparent
+decorations="transparent"
+
+# 终端内容和窗口之际的空白区域设置
+padding={x=10, y=20}
+opacity=0.95
+
+# 窗口初始大小设置
+dimensions={columns=80, lines=25}
+
+# 起始位置
+position={x=300, y=100}
+
+# option_as_alt="Both"
+
+# 颜色设置
+# 系统级颜色设置
+[colors.primary]
+background="#15141b"
+foreground="#edecee"
+
+# 光标颜色设置设置
+[colors.cursor]
+cursor="#a277ff"
+
+# 文本选中区域颜色,text:前景色,background:背景色
+[colors.selection]
+text="CellForeground"
+background="#29263c"
+
+# 终端基础配色
+[colors.normal]
+black="#110f18"
+red="#ff6767"
+green="#61ffca"
+yellow="#ffca85"
+blue="#a277ff"
+magenta="#a277ff"
+cyan="#61ffca"
+white="#edecee"
+
+# bright颜色
+[colors.bright]
+black="#4d4d4d"
+red="#ff6767"
+green="#61ffca"
+yellow="#ffca85"
+blue="#a277ff"
+magenta="#a277ff"
+cyan="#61ffca"
+white="#edecee"
+
+# 终端内搜时匹配文本的高亮颜色
+[colors.search.matches]
+foreground="#000000"
+background="#ffffff"
+
+# 搜索时当前焦点匹配项（即选中高亮项）的颜色
+[colors.search.focused_match]
+foreground="#ffffff"
+background="#9F7Af5"
+
+
+# 字体设置
+# 大小等基础设置
+[font]
+size=20
+
+# 调整字符在终端单元格中的 水平（X）和垂直（Y）偏移，解决字体显示不居中或对齐问题
+[font.offset]
+x=0
+y=2
+
+# 基础设置
+[font.normal]
+family="Monaco"
+style="Regular"
+
+# 粗体
+[font.bold]
+family="Fira Code"
+style="Regular"
+
+# 斜体
+[font.italic]
+family="Fira Code"
+style="Italic"
+
+# 粗斜体
+[font.bold_italic]
+family="Fira Code"
+style="Italic"
+
+
+# 滚动相关设置
+[scrolling]
+# 回滚缓冲区的最大行数,指定"0"将禁用滚动
+history=100000
+multiplier=4
+
+
+# 光标设置
+[cursor]
+style={shape="Block"}
+
+
+# 自定义文本选择的行为
+[selection]
+# 定义哪些字符被视为“语义逃逸字符”，即当使用 Shift + 方向键进行文本选择时，这些字符将作为单词边界
+semantic_escape_chars=""",│`|:"'' ()[]{}<>"""
+
+# 保存到剪切板
+save_to_clipboard=true
+
